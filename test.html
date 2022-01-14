@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Świat piwa</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <script src="static/JS/modal.js"></script>
+    <link rel="stylesheet" href="./static/CSS/style2.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Świat piwa</h1>
+    </header>
+    <main>
+      <article>
+        <h2>Świat jest pełen piwa, a ludzie tylko się pienią na jego powierzchni – smakują tylko wtedy, gdy nie przyczepiają się do ciebie. Chociaż, komu jak się podoba.</h2>
+
+        <h3>Koncepcja światu piwa została pierwszy raz zaprowadzoną mną w 2022 roku i na czas terażniejszy szybko nabiera swoją popularność w świecie. Chcemy wam zaproponować lęki i podstawowy ogląd świata piwa w Polsce a Ukrainie.</h3>
+        <div id="container" class="container">
+          <a href="Ukraine.html">
+            <button class="button-9" role="button">Ukraiński świat piwa</button>
+          </a>
+          <a href="Poland.html">
+            <button class="button-9" role="button">Polski świat piwa</button>
+          </a>
+        </div>
+      </article>
+    </main>
+    <button id="myBtn">Powiedź nam, jakie twoje ulubione piwo</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form>
+          <label for="first_name" class="control-label">First name:</label>
+          <input id="first_name" type="text" name="first_name" class="form-control" value="" placeholder="2-25 symbols" minlength="2" maxlength="25" required="required"><br/>
+          <label for="last_name" class="control-label">Last name:</label>
+          <input id="last_name" type="text" name="last_name" class="form-control" value="" placeholder="2-25 symbols" minlength="2" maxlength="25" required="required"><br/>
+          <label for="country" class="control-label">Country:</label>
+          <input id="country" type="text" name="country" class="form-control" value="" placeholder="2-25 symbols" minlength="2" maxlength="25" required="required"><br/>
+          <label for="favourite" class="control-label">Your favourite beer:</label>
+          <input id="favourite" type="text" name="favourite" class="form-control" value="" placeholder="which one?" maxlength="100" required="required"><br/>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+
+    </div>
+    <script src="/static/JS/modal.js"></script>
+    <script>
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+    <footer>
+      <p>©Copyright is not owned by anyone, 2022. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
